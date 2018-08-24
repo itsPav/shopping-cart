@@ -1,29 +1,31 @@
 import Vuex from 'vuex'
-
 import Vue from 'vue'
+import shop from '@/api/shop'
+import { resolve } from 'url';
+import actions from './actions'
+import cart from './modules/cart'
+import products from './modules/products'
+
 
 Vue.use(Vuex)
 
-new Vuex.Store({
-    state: {
-        products: []
+export default new Vuex.Store({
+    modules: {
+        cart,
+        products
     },
 
-    getters: {
-        productsCount () {
+    state: { // = data
 
-        }
     },
 
-    actions: {
-        fetchProducts () {
+    getters: { // = computer properties
 
-        }
     },
+
+    actions,
 
     mutations: {
-        setProducts () {
-            // update products
-        }
+
     }
 })
